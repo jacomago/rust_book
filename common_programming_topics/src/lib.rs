@@ -38,13 +38,12 @@ mod variables {
         assert_eq!(health, 6);
     }
 
-    // Won't work on all platforms as type names change
-    fn type_of<T>(_: &T) -> &'static str {
-        return std::any::type_name::<T>();
-    }
-
     #[test]
     fn variable_type() {
+        // Won't work on all platforms as type names change
+        fn type_of<T>(_: &T) -> &'static str {
+            return std::any::type_name::<T>();
+        }
         let health = 5;
         assert_eq!(type_of(&health), "i32");
     }
