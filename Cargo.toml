@@ -1,6 +1,6 @@
 [workspace]
 
 members = [
-    "basics",
+    "common_programming_topics",
     "guessing_game"
 ]

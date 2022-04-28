@@ -9,15 +9,8 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 
 [[package]]
-name = "chapter_1"
+name = "common_programming_topics"
 version = "0.1.0"
-
-[[package]]
-name = "chapter_2"
-version = "0.1.0"
-dependencies = [
- "rand",
-]
 
 [[package]]
 name = "getrandom"
@@ -28,6 +21,13 @@ dependencies = [
  "cfg-if",
  "libc",
  "wasi",
+]
+
+[[package]]
+name = "guessing_game"
+version = "0.1.0"
+dependencies = [
+ "rand",
 ]
 
 [[package]]
