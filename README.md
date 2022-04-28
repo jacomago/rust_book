@@ -1,4 +1,4 @@
-# The Rust by Test Book
+# Rust by Test
 
 Aiming to write code examples to refer back to for rust. Based on topics from the rust book.
 
