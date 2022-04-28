@@ -1,12 +1,12 @@
 #[cfg(test)]
-mod numbers {
+mod primitives {
     #[test]
-    fn int() {
-        assert_eq!(2 + 2, 4);
+    fn signed_integers() {
+        assert_eq!(2 + 2i32 + -3, 1);
     }
 
     #[test]
-    fn float() {
+    fn floating_point() {
         assert_eq!(2.0 + 2.0, 4.0)
     }
 
@@ -18,6 +18,16 @@ mod numbers {
     #[test]
     fn float_almost_equal() {
         assert!(0.001 > (1.0 / 3.0 - 0.3333333333333333))
+    }
+
+    #[test]
+    fn character() {
+        assert_eq!('a'.len_utf8(), 1)
+    }
+
+    #[test]
+    fn boolean() {
+        assert_ne!(true, false)
     }
 }
 
