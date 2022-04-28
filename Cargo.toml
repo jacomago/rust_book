@@ -2,5 +2,4 @@
 
 members = [
     "common_programming_topics",
-    "guessing_game"
 ]
