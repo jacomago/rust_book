@@ -66,3 +66,41 @@ mod variables {
         assert_eq!(new_health, 5);
     }
 }
+
+#[cfg(test)]
+mod tuples {
+    #[test]
+    fn create() {
+        let tower = (100, "Projectile", 1);
+        assert_eq!(tower, (100, "Projectile", 1))
+    }
+
+    #[test]
+    fn index() {
+        let towers = (1, 2);
+        assert_eq!(towers.0, 1);
+        assert_eq!(towers.1, 2);
+    }
+
+    #[test]
+    fn single_element() {
+        let tower_health = (100,);
+        assert_eq!(tower_health.0, 100);
+    }
+
+    #[test]
+    fn destructure() {
+        let tower = (100, "Projectile", 1);
+        let (health, name, level) = tower;
+        assert_eq!(health, tower.0);
+        assert_eq!(name, tower.1);
+        assert_eq!(level, tower.2);
+    }
+
+    #[test]
+    fn mutability() {
+        let mut tower = (100, "Projectile", 1);
+        tower.0 = 90;
+        assert_eq!(tower.0, 90);
+    }
+}
